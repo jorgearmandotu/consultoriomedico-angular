@@ -1,1 +1,80 @@
-<p>citas works!</p>
+<div class="container">
+  <br><br>
+  <h1 class="header center green-text">Consultorio Médico</h1>
+  <div class="row center">
+      <h5 class="header col s12 light">Asignacion de citas</h5>
+  </div>
+  <br><br>
+  <form #citaForm="ngForm" (ngsubmit)="agregarCita(citaForm)">
+      <div class="row">
+          <div class="input-field col s12 m6">
+              <input name="identificacion" #identificaion="ngModel" [(ngModel)]="citaService.selectedCita.identificacion" value="" id="identificacion" type="text" class="validate" required/>
+              <label class="active" for="identificacion">Identificación</label>
+          </div>
+      </div>
+      <div class="row">
+          <div class="input-field col s12 m6">
+              <input name="nombre" #nombre="ngModel" [(ngModel)]="citaService.selectedCita.nombre" value="" id="nombre" type="text" class="validate" required />
+              <label class="active" for="nombre">Nombre</label>
+          </div>
+      </div>
+      <div class="row">
+          <div class="input-field col s12 m6">
+              <input name="telefono" #telefono="ngModel" [(ngModel)]="citaService.selectedCita.telefono" value="" id="telefono" type="tel" class="validate" required/>
+              <label class="active" for="telefono">Telefono</label>
+          </div>
+      </div>
+      <div class="row">
+          <div class="input-field col s12 m6">
+              <input name="email" #email="ngModel" [(ngModel)]="citaService.selectedCita.email" value="" id="email" type="email" class="validate" />
+              <label class="active" for="email">Correo electronico</label>
+          </div>
+      </div>
+      <div class="row">
+          <div class="input-field col s12 m6">
+              <select id="especialidad" name="especialidad" #especialidad="ngModel" [(ngModel)]="citaService.selectedCita.especialidad">
+                  <option value="" disabled selected>Selecione una    opcion</option>
+                  <option value="Neumologia">Neumologia</option>
+                  <option value="Cardiologia">Cardiologia</option>
+                  <option value="Traumotologia">Traumotologia</option>
+              </select>
+              <label  for="especialidad">Especialidad</label>
+          </div>
+      </div>
+      <div class="row">
+          <div class="input-field col s12 m6">
+              <select id="especialista" name="especialista" #especialista="ngModel" [(ngModel)]="citaService.selectedCita.especialista">
+                  <option value="" disabled selected>Selecione una    opcion</option>
+                  <option value="">Andres Garcia</option>
+                  <option value="">Pablo solarte</option>
+                  <option value="">Liliana Gonzales</option>
+              </select>
+              <label  for="especialista">especialista</label>
+          </div>
+      </div>
+      <div class="row">
+          <div class="input field col s12 m6">
+              <label class="active" for="fecha">Fecha</label>
+              <input name="fecha" #fecha="ngModel" [(ngModel)]="citaService.selectedCita.fecha" id="fecha" type="text" class="datepicker" required>
+          </div>
+      </div>
+      <div class="row">
+          <div class="input-field col s12 m6">
+              <select id="hora" name="hora" #hora="ngModel" [(ngModel)]="citaService.selectedCita.hora">
+                  <option value="" disabled selected>Selecione una    opcion</option>
+                  <option value="">8:00</option>
+                  <option value="">8:30</option>
+                  <option value="">9:00</option>
+                  <option value="">9:30</option>
+                  <option value="">10:00</option>
+              </select>
+              <label  for="hora">Hora</label>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col s12 m6 center">
+              <button class="btn waves-effect waves-ligth">Asignar Cita <i class="material-icons save">save</i></button>
+          </div>
+      </div>
+  </form>
+</div>
