@@ -33,7 +33,6 @@
       <div class="row">
           <div class="input-field col s12 m6">
               <select id="especialidad" name="especialidad" #especialidad="ngModel" [(ngModel)]="citaService.selectedCita.especialidad">
-                  <option value="" disabled selected>Selecione una    opcion</option>
                   <option value="Neumologia">Neumologia</option>
                   <option value="Cardiologia">Cardiologia</option>
                   <option value="Traumotologia">Traumotologia</option>
@@ -44,10 +43,9 @@
       <div class="row">
           <div class="input-field col s12 m6">
               <select id="especialista" name="especialista" #especialista="ngModel" [(ngModel)]="citaService.selectedCita.especialista">
-                  <option value="" disabled selected>Selecione una    opcion</option>
-                  <option value="">Andres Garcia</option>
-                  <option value="">Pablo solarte</option>
-                  <option value="">Liliana Gonzales</option>
+                  <option value="Andres Garcia">Andres Garcia</option>
+                  <option value="Pablo solarte">Pablo solarte</option>
+                  <option value="Liliana Gonzales">Liliana Gonzales</option>
               </select>
               <label  for="especialista">especialista</label>
           </div>

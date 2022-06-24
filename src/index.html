@@ -8,9 +8,27 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
 </head>
 <body>
   <app-root></app-root>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+    //sidenav
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems);
+    let collapsibleElem = document.querySelector('.collapsible');
+    let collapsibleInstance = M.Collapsible.init(collapsibleElem);
+
+    //selects
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems);
+
+    //datepicker
+    var elems = document.querySelectorAll('.datepicker');
+    var instances = M.Datepicker.init(elems);
+});
+  </script>
 </body>
 </html>

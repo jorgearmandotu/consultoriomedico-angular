@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+header, main, footer {
+  padding-left: 180px;
+}
+
+@media only screen and (max-width : 992px) {
+  header, main, footer {
+    padding-left: 0;
+  }
+}
+
+#btn_search_id {
+  margin-top: 20px;
+}
