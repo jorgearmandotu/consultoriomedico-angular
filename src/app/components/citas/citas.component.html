@@ -8,13 +8,13 @@
   <form #citaForm="ngForm" (ngsubmit)="agregarCita(citaForm)">
       <div class="row">
           <div class="input-field col s12 m6">
-              <input name="identificacion" #identificaion="ngModel" [(ngModel)]="citaService.selectedCita.identificacion" value="" id="identificacion" type="text" class="validate" required/>
+              <input name="identification" #identificaion="ngModel" [(ngModel)]="citaService.selectedCita.identification" value="" id="identificacion" type="text" class="validate" required/>
               <label class="active" for="identificacion">Identificación</label>
           </div>
       </div>
       <div class="row">
           <div class="input-field col s12 m6">
-              <input name="nombre" #nombre="ngModel" [(ngModel)]="citaService.selectedCita.nombre" value="" id="nombre" type="text" class="validate" required />
+              <input name="name" #nombre="ngModel" [(ngModel)]="citaService.selectedCita.name" value="" id="nombre" type="text" class="validate" required />
               <label class="active" for="nombre">Nombre</label>
           </div>
       </div>
@@ -53,7 +53,7 @@
       <div class="row">
           <div class="input field col s12 m6">
               <label class="active" for="fecha">Fecha</label>
-              <input name="fecha" #fecha="ngModel" [(ngModel)]="citaService.selectedCita.fecha" id="fecha" type="text" class="datepicker" required>
+              <input name="date" #fecha="ngModel" [(ngModel)]="citaService.selectedCita.date" id="fecha" type="text" class="datepicker" required>
           </div>
       </div>
       <div class="row">
@@ -71,7 +71,8 @@
       </div>
       <div class="row">
           <div class="col s12 m6 center">
-              <button class="btn waves-effect waves-ligth">Asignar Cita <i class="material-icons save">save</i></button>
+              <button class="btn right" (click)="resetForm(citaForm)">Limpiar</button>
+              <button class="btn waves-effect waves-ligth" (click)="agregarCita(citaForm)">Asignar Cita <i class="material-icons save">save</i></button>
           </div>
       </div>
   </form>

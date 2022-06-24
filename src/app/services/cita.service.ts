@@ -20,8 +20,9 @@ export class CitaService {
     return this.http.get(this.URL_API);
   }
 
-  postCita(Cita:Cita) {
-    return this.http.post(this.URL_API, Cita);
+  postCita(cita:Cita) {
+    console.log(cita);
+    return this.http.post(this.URL_API, cita);
   }
 
   PutCita(Cita:Cita){
