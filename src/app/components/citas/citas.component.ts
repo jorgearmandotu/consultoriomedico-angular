@@ -17,7 +17,7 @@ export class CitasComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  agregarCita(form?: NgForm) {
+  agregarCita(form?: NgForm): void {
     this.citaService.postCita(form?.value)
       .subscribe(res => {
         this.resetForm(form);
@@ -25,7 +25,7 @@ export class CitasComponent implements OnInit {
       });
   }
 
-  resetForm(form?:NgForm){
+  resetForm(form?:NgForm) :void{
     if(form){
       form.reset();
       this.citaService.selectedCita = new Cita();
