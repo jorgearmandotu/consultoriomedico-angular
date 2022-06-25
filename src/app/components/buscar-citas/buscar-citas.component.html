@@ -1,0 +1,77 @@
+<div class="contenido">
+  <br><br>
+  <h1 class="header  green-text titulo">Consultorio Médico</h1>
+  <div class="row ">
+      <h5 class="header col s12 light subtitulo">Buscar Citas</h5>
+  </div>
+  <br><br>
+  <form action="#!">
+      <div class="row">
+          <div class="input field col s12 m6">
+              <label class="active" for="fecha">Fecha</label>
+              <input id="fecha" type="text" class="datepicker" required value="12-06-22" >
+          </div>
+      </div>
+      <div class="row">
+          <div class="input-field col s12 m6">
+              <select id="especialidad" name="especialidad">
+                  <option value="" disabled>Selecione una    opcion</option>
+                  <option value="Neumologia" selected>Neumologia</option>
+                  <option value="Cardiologia">Cardiologia</option>
+                  <option value="Traumotologia">Traumotologia</option>
+              </select>
+              <label  for="especialidad">Especialidad</label>
+          </div>
+      </div>
+      <div class="row">
+          <div class="input-field col s12 m6">
+              <select id="especialista">
+                  <option value="" disabled>Selecione una    opcion</option>
+                  <option value="" selected>Andres Garcia</option>
+                  <option value="">Pablo solarte</option>
+                  <option value="">Liliana Gonzales</option>
+              </select>
+              <label  for="especialista">especialista</label>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col s12 m6 center">
+              <button class="btn waves-effect waves-ligth" type="submit" name="action">Buscar<i class="material-icons search">search</i></button>
+          </div>
+      </div>
+  </form>
+  <div class="search-results col s12 m6">
+      <table class="responsive-table">
+          <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Especialidad</th>
+                <th>op</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr>
+                <td>12-06-22</td>
+                <td>11:00</td>
+                <td>Neumologia</td>
+                <td>Andres Garcia</td>
+                <td>
+                  <a href="editcita.html"><i class="material-icons save">edit</i></a>
+                  <a href="#!"><i class="material-icons save">block</i></a>
+                </td>
+              </tr>
+              <tr>
+                <td>12-06-22</td>
+                <td>15:30</td>
+                <td>Neumologia</td>
+                <td>Andres Garcia</td>
+                <td>
+                  <a href="#!"><i class="material-icons save">edit</i></a>
+                  <a href="#!"><i class="material-icons save">block</i></a>
+                </td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</div>

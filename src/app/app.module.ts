@@ -7,12 +7,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CitasComponent } from './components/citas/citas.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { ModificacionCitasComponent } from './components/modificacion-citas/modificacion-citas.component';
+import { BuscarCitasComponent } from './components/buscar-citas/buscar-citas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CitasComponent,
-    NavbarComponent
+    NavbarComponent,
+    ModificacionCitasComponent,
+    BuscarCitasComponent
   ],
   imports: [
     BrowserModule,

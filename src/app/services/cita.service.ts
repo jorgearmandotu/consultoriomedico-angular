@@ -25,7 +25,7 @@ export class CitaService {
   }
 
   PutCita(Cita:Cita){
-    return this.http.put(this.URL_API+'/${Cita._id}', Cita);
+    return this.http.put(this.URL_API+'/${Cita.identification}', Cita);
   }
 
   DeleteCita(_id:String) {

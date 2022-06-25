@@ -1,11 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
 header, main, footer {
-  padding-left: 180px;
+  padding-left: 0px;
+}
+
+.contenido {
+  padding-left: 300px;
+}
+
+.titulo, .subtitulo{
+  padding-left: 30px;
+}
+.titulo {
+  margin-top: 0%;
 }
 
 @media only screen and (max-width : 992px) {
-  header, main, footer {
+  header, main, footer, .contenido {
     padding-left: 0;
+  }
+  .sidenav-trigger {
+    position: fixed;
   }
 }
 
