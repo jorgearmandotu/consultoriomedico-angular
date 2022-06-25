@@ -1,11 +1,11 @@
 export class Cita {
-  constructor(_id="", identification = "", name = "", especialidad="", especialista="", date=new Date(), hora="", email="", telefono="") {
+  constructor(_id="", identification = "", name = "", especialidad="", especialista="", hora="", email="", telefono="") {
     this._id =_id;
     this.identification = identification;
     this.name = name;
     this.especialidad = especialidad;
     this.especialista = especialista;
-    this.date = date;
+    this.date = "";
     this.hora = hora;
     this.email = email;
     this.telefono = telefono;
@@ -15,7 +15,7 @@ export class Cita {
   name: String;
   especialidad: String;
   especialista: String;
-  date: Date;
+  date: String;
   hora: String;
   email: string;
   telefono: String;
