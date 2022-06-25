@@ -6,11 +6,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CitasComponent } from './components/citas/citas.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CitasComponent
+    CitasComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
