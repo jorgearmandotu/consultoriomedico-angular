@@ -5,15 +5,15 @@
       <h5 class="header col s12 light subtitulo">Modificar Citas</h5>
   </div>
   <br><br>
-  <form action="#!">
+  <form #searchForm="ngForm" (ngSubmit)="buscarCitas(searchForm)" >
       <div class="row">
           <div class="input-field col s10 m5 center">
               <div class="search-wrapper focused">
-                  <input id="search" placeholder="Buscar por CC" required />
+                  <input id="search" placeholder="Buscar por CC" required name="identification" />
               </div>
           </div>
           <div class="col s1 m1 center" id="btn_search_id">
-              <button class="btn waves-effect cyan darken-1 btn-small" type="submit" name="action">
+              <button class="btn waves-effect cyan darken-1 btn-small" (click)="buscarCitas(searchForm)">
                   <i class="material-icons">search</i>
               </button>
           </div>
@@ -33,26 +33,17 @@
             </tr>
           </thead>
           <tbody>
-              <tr>
-                <td>12-06-22</td>
-                <td>15:30</td>
-                <td>Neumologia</td>
-                <td>Andres Garcia</td>
+            <tr *ngFor="let user of citas;">
+                <td>fecha</td>
+                <td>hora</td>
+                <td>especialidad</td>
+                <td>especialista</td>
                 <td>
                   <a href="editcita.html"><i class="material-icons save">edit</i></a>
                   <a href="#!"><i class="material-icons save">block</i></a>
                 </td>
               </tr>
-              <tr>
-                <td>13-06-22</td>
-                <td>11:00</td>
-                <td>Cardiologia</td>
-                <td>Juan Duarte</td>
-                <td>
-                  <a href="#!"><i class="material-icons save">edit</i></a>
-                  <a href="#!"><i class="material-icons save">block</i></a>
-                </td>
-              </tr>
+
           </tbody>
       </table>
   </div>

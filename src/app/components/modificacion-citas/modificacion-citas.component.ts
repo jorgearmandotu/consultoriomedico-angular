@@ -15,8 +15,8 @@ export class ModificacionCitasComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  buscarId(form?: NgForm): void{
-    this.citaService.PutCita(form?.value).subscribe(res=>{
+  buscarCitas(form?: NgForm): void{
+    this.citaService.getCitasId(form?.value.identification).subscribe(res=>{
       console.log(res);
     })
   }

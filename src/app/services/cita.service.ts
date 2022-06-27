@@ -24,6 +24,9 @@ export class CitaService {
     console.log(cita);
     return this.http.post(this.URL_API, cita);
   }
+  getCitasId(identification:String){
+    return this.http.get(this.URL_API+'/citas/${identification}')
+  }
 
   PutCita(Cita:Cita){
     return this.http.put(this.URL_API+'/${Cita.identification}', Cita);
