@@ -10,13 +10,14 @@ import { CitaService } from 'src/app/services/cita.service';
 export class ModificacionCitasComponent implements OnInit {
 
   citas = [];
+  inputSearch: String = '';
   constructor( public citaService: CitaService ) { }
 
   ngOnInit(): void {
   }
 
   buscarCitas(form?: NgForm): void{
-    this.citaService.getCitasId(form?.value.identification).subscribe(res=>{
+    this.citaService.getCitasId(this.inputSearch).subscribe(res=>{
       console.log(res);
     })
   }

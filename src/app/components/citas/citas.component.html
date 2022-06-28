@@ -8,7 +8,7 @@
   <form #citaForm="ngForm" (ngsubmit)="agregarCita(citaForm)">
       <div class="row">
           <div class="input-field col s12 m6">
-              <input name="identification" #identificaion="ngModel" [(ngModel)]="citaService.selectedCita.identification" value="" id="identificacion" type="text" class="validate" required/>
+              <input name="identification" #identification="ngModel" [(ngModel)]="citaService.selectedCita.identification" value="" id="identificacion" type="text" class="validate" required/>
               <label class="active" for="identificacion">Identificación</label>
           </div>
       </div>
